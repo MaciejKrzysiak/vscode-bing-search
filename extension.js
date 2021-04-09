@@ -25,9 +25,9 @@ function activate(context) {
 	console.log('Congratulations, your extension "bing-search" is now active!');
 
 	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with  registerCommand
+	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('bing-search.helloWorld', async function () {
+	let disposable = vscode.commands.registerCommand('bing-search.bingSearch', async function () {
 		// The code you place here will be executed every time your command is executed
 		query = await showInputBox()
 		vscode.env.openExternal("https://www.bing.com/search?q=" + query)

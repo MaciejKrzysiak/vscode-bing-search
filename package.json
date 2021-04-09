@@ -10,14 +10,14 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:bing-search.helloWorld"
+		"onCommand:bing-search.bingSearch"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "bing-search.helloWorld",
-				"title": "Hello World"
+				"command": "bing-search.bingSearch",
+				"title": "Bing Search"
 			}
 		]
 	},
