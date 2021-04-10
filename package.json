@@ -2,7 +2,10 @@
 	"name": "bing-search",
 	"displayName": "Bing Search",
 	"description": "Query the Bing Search Engine.",
-	"version": "0.0.1",
+	"publisher": "MaciejKrzysiak",
+	"repository": "https://github.com/MaciejKrzysiak/vscode-bing-search",
+	"icon": "images/logo.png",
+	"version": "0.0.3",
 	"engines": {
 		"vscode": "^1.55.0"
 	},
@@ -10,8 +13,7 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:bing-search.bingSearch",
-		"onCommand:bing-search.editorContextMenuBingSearch"
+		"onStartupFinished"
 	],
 	"main": "./extension.js",
 	"contributes": {
@@ -29,11 +31,11 @@
 			"commandPalette": [
 				{
 				  "command": "bing-search.commandPaletteBingSearch",
-				  "when": "bingSearch.viewCommandPaletteBingSearchInCommandPalette == true"
+				  "when": "bing-search.viewCommandPaletteBingSearchInCommandPalette == true"
 				},
 				{
 				  "command": "bing-search.editorContextMenuBingSearch",
-				  "when": "bingSearch.viewEditorContextMenuBingSearchInCommandPalette == true"
+				  "when": "bing-search.viewEditorContextMenuBingSearchInCommandPalette == true"
 				}
 			  ],
 			"editor/context": [
