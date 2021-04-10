@@ -4,12 +4,12 @@ Search Bing and examine queries right from the Visual Studio Code editor.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+### Command Palette Search
+https://user-images.githubusercontent.com/32139931/114256273-d47f3400-997d-11eb-88c6-9415a5688924.mp4
 
-For example if there is an image subfolder under your extension project workspace:
+### Editor Content Menu 
+https://user-images.githubusercontent.com/32139931/114256288-eeb91200-997d-11eb-9406-a03a62a57b2c.mp4
 
-\!\[feature X\]\(images/feature-x.png\)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
 
