@@ -10,7 +10,8 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:bing-search.bingSearch"
+		"onCommand:bing-search.bingSearch",
+		"onCommand:bing-search.editorContextMenuBingSearch"
 	],
 	"main": "./extension.js",
 	"contributes": {
@@ -18,8 +19,21 @@
 			{
 				"command": "bing-search.bingSearch",
 				"title": "Bing Search"
+			},
+			{
+				"command": "bing-search.editorContextMenuBingSearch",
+				"title": "Bing Search"
 			}
-		]
+		],
+		"menus": {
+			"editor/context": [
+				{
+				"when": "editorTextFocus",
+				"command": "bing-search.editorContextMenuBingSearch",
+				"group": "bing-search@1"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"lint": "eslint .",
