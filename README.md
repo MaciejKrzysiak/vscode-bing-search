@@ -12,6 +12,8 @@ https://user-images.githubusercontent.com/32139931/114256273-d47f3400-997d-11eb-
 ![Editor Content Menu Search](https://user-images.githubusercontent.com/32139931/114256561-ad296680-997f-11eb-9863-461c0ebe7ada.png)
 https://user-images.githubusercontent.com/32139931/114256288-eeb91200-997d-11eb-9406-a03a62a57b2c.mp4
 
+## Installation
+https://marketplace.visualstudio.com/items?itemName=MaciejKrzysiak.bing-search
 
 
 
