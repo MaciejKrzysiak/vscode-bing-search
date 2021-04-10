@@ -17,7 +17,7 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "bing-search.bingSearch",
+				"command": "bing-search.commandPaletteBingSearch",
 				"title": "Bing Search"
 			},
 			{
@@ -26,6 +26,16 @@
 			}
 		],
 		"menus": {
+			"commandPalette": [
+				{
+				  "command": "bing-search.commandPaletteBingSearch",
+				  "when": "bingSearch.viewCommandPaletteBingSearchInCommandPalette == true"
+				},
+				{
+				  "command": "bing-search.editorContextMenuBingSearch",
+				  "when": "bingSearch.viewEditorContextMenuBingSearchInCommandPalette == true"
+				}
+			  ],
 			"editor/context": [
 				{
 				"when": "editorTextFocus",

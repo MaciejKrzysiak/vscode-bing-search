@@ -5,7 +5,7 @@ const empty_query = "Failed to search an empty query."
 async function showInputBox() {
 	const query = await vscode.window.showInputBox({
 		value: "",
-		placeHolder: "cat backflip"
+		placeHolder: "cat playing drums"
 	});
 
 	return query;
@@ -16,8 +16,11 @@ async function showInputBox() {
  */
 function activate(context) {
 
-	let bingSearchDisposable = vscode.commands.registerCommand('bing-search.bingSearch', async function () {
-		query = await showInputBox()
+	vscode.commands.executeCommand('setContext', 'bingSearch.viewCommandPaletteBingSearchInCommandPalette', true);
+	vscode.commands.executeCommand('setContext', 'bingSearch.viewEditorContextMenuBingSearchInCommandPalette', false);
+
+	let bingSearchDisposable = vscode.commands.registerCommand('bing-search.commandPaletteBingSearch', async function () {
+		var query = await showInputBox()
 		if (query != undefined && query != null && query.trim() != "") {
 			vscode.env.openExternal("https://www.bing.com/search?q=" + query);
 		} else {
@@ -26,7 +29,7 @@ function activate(context) {
 	});
 
 	let editorContextMenuBingSearchDisposable = vscode.commands.registerCommand('bing-search.editorContextMenuBingSearch', async function () {
-		query = editor.document.getText(editor.selection);
+		var query = editor.document.getText(editor.selection);
 		if (query != undefined && query != null && query.trim() != "") {
 			vscode.env.openExternal("https://www.bing.com/search?q=" + query);
 		} else {
