@@ -1,6 +1,7 @@
 # vscode-bing-search
 
-Have some burning questions or some code want to see the documentation for? Use Bing Search to speed up your programming process.
+Have some burning questions or some code you want to see the documentation for?  
+Use Bing Search to speed up your programming process.
 
 ## Features
 
@@ -12,7 +13,8 @@ See entire video here: ![Command Palette Bing Search](https://user-images.github
 
 ### Editor Context Menu Search. Highlight a query to search!
 After installation, simply highlight text you'd like to query.  
-Then, right click to access the editor context menu. Find the 'Bing Search' command and query away.  
+Then, right click to access the editor context menu.   
+Find the 'Bing Search' command and query away.  
 ![ECMS giphy](https://user-images.githubusercontent.com/32139931/114467895-3a530200-9bb0-11eb-8be7-a22ded47c4ff.gif)  
 See entire video here: ![Editor Content Menu Search](https://user-images.githubusercontent.com/32139931/114256288-eeb91200-997d-11eb-9406-a03a62a57b2c.mp4)
 
