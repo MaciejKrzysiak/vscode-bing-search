@@ -26,7 +26,6 @@ function activate(context) {
 
 	vscode.commands.executeCommand('setContext', 'bing-search.viewCommandPaletteBingSearchInCommandPalette', true);
 	vscode.commands.executeCommand('setContext', 'bing-search.viewEditorContextMenuBingSearchInCommandPalette', false);
-	vscode.commands.executeCommand('setContext', 'bing-search.viewkeyBindedDecision', true);
 
 	let bingSearchDisposable = vscode.commands.registerCommand('bing-search.commandPaletteBingSearch', async function () {
 		var query = await showInputBox()
@@ -37,20 +36,9 @@ function activate(context) {
 		var query = editor.document.getText(editor.selection);
 		queryBing(query)
 	});
-
-	let keyBindedDecisionDisposable = vscode.commands.registerCommand('bing-search.keyBindedDecision', async function () {
-		query = editor.document.getText(editor.selection);
-		if (query != undefined && query != null && query.trim() != "") {
-			queryBing(query)
-		} else {
-			var query = await showInputBox()
-			queryBing(query)
-		}
-	});
   
 	context.subscriptions.push(bingSearchDisposable);
 	context.subscriptions.push(editorContextMenuBingSearchDisposable);
-	context.subscriptions.push(keyBindedDecisionDisposable)
 }
 
 function deactivate() {}

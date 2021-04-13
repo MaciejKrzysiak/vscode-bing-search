@@ -5,7 +5,7 @@
 	"publisher": "MaciejKrzysiak",
 	"repository": "https://github.com/MaciejKrzysiak/vscode-bing-search",
 	"icon": "images/logo.png",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"engines": {
 		"vscode": "^1.55.0"
 	},
@@ -48,10 +48,16 @@
 		},
 		"keybindings": [
 			{
-			  "command": "bing-search.keyBindedDecision",
-			  "key": "ctrl+b",
-			  "mac": "cmd+b",
-			  "when": "bing-search.viewkeyBindedDecision == true"
+				"command": "bing-search.commandPaletteBingSearch",
+				"key": "ctrl+shift+1",
+				"mac": "cmd+shift+1",
+				"when": "bing-search.viewCommandPaletteBingSearchInCommandPalette == true"
+			},
+			{
+			  "command": "bing-search.editorContextMenuBingSearch",
+			  "key": "ctrl+shift+2",
+			  "mac": "cmd+shift+2",
+			  "when": "editorTextFocus"
 			}
 		  ]
 	},
