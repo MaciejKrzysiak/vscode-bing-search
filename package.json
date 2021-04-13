@@ -45,7 +45,15 @@
 				"group": "bing-search@1"
 				}
 			]
-		}
+		},
+		"keybindings": [
+			{
+			  "command": "bing-search.keyBindedDecision",
+			  "key": "ctrl+b",
+			  "mac": "cmd+b",
+			  "when": "bing-search.viewkeyBindedDecision == true"
+			}
+		  ]
 	},
 	"scripts": {
 		"lint": "eslint .",
